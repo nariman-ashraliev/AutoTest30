@@ -33,7 +33,7 @@ public class FirstTestOne {
 
     public void testBlockTitle(){
     WebElement blockTitle = driver.findElement(By.xpath("//*[@id=\"pay-section\"]/div/div/div[2]/section/div/h2"));
-    Assertions.assertEquals(blockTitle.getText(),"Онлайн пополнение без комиссии");
+    Assertions.assertEquals(blockTitle.getText().replaceAll("\\s+", " "),"Онлайн пополнение без комиссии");
 
 }
 @DisplayName("Проверить наличие логотипов платёжных систем")
